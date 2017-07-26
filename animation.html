@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Website using javascript and jQuery</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+	
+<body>
+<header id="head"><strong><em>Supernatural</strong></em></header>
+
+<div id="container">
+	<button id="btnFadeOut">Fade Out</button>
+	<button id="btnFadeIn">Fade In</button>
+	<button id="btnFadeTog">Fade Toggle</button>
+
+	<hr>
+	<button id="btnSlideUp">Slide Up</button>
+	<button id="btnSlideDown">Slide down</button>
+	<button id="btnSlideTog">Slide Toggle</button>
+	
+	
+</div>
+<div id="box"><h1>Welcome to this page</h1>
+<hr>
+<br>
+
+	<button id="moveRight">Move Right</button>
+	<button id="moveLeft">Move Left</button>
+	<button id="moveAround">Move Around</button>
+	<div id="box2"><img src="sup1.jpg" height="100" width="100"      ></div>
+	</div>
+
+
+
+<script>
+	
+	$(document).ready(function(){
+		$('#btnFadeOut').click(function(){
+			$('#box').fadeOut(3000, function(){
+			$('#btnFadeOut').text('It\'s Gone');
+			$('#box').text('Faded away');
+		});
+
+
+		});
+		$('#btnFadeOut').click(function(){
+			$('#head').fadeOut(3000);
+			$('#head').text('Fading Away');
+
+		});
+		$('#btnFadeIn').click(function(){
+			$('#box').fadeIn(3000);
+
+			$('#box').text('Welcome Back');
+
+		});
+		$('#btnFadeIn').click(function(){
+			$('#head').fadeIn(3000);
+
+			$('#head').text('Supernatural');
+
+		});
+		$('#btnFadeTog').click(function(){
+			$('#box').fadeToggle(1000);
+
+		});
+		$('#btnSlideUp').click(function(){
+			$('#box').slideUp();
+
+		});
+		$("#btnSlideDown").click(function(){
+			$('#box').slideDown();
+
+		});
+		$("#btnSlideTog").click(function(){
+			$('#box').slideToggle();
+
+		});
+		
+		$('#moveRight').click(function(){
+
+			$('#box2').animate({
+				left:500,
+				height: '100px',
+				width:'100px',
+				opacity:'0.5'
+			});
+		});
+		$('#moveLeft').click(function(){
+			$('#box2').animate({
+				left:0,
+				height:'100px',
+				width:'100px',
+				opacity:'1'
+
+
+			});
+
+		});
+		$('#moveAround').click(function(){
+			var box = $('#box2');
+			box.animate({
+				left:300
+
+			});
+			box.animate({
+				top:300
+
+			});
+			box.animate({
+				left:0,
+				top:300
+
+			});
+			box.animate({
+				left:0,
+				top:0
+
+			});
+
+		});
+
+
+	});
+</script>
+
+</body>
+</html>

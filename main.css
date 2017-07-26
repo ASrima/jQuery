@@ -1,0 +1,48 @@
+header{
+	
+    color:blue;
+    background:#013f44;
+    text-align: center;
+    border-bottom: 4px #000 solid;
+
+    margin-bottom: 5px #000 solid;
+    padding:10px;
+
+
+}
+#container{
+	width: 90%;
+	margin:auto;
+	padding:10px;
+}
+
+#btnFadeOut{
+	color:#10ed40;
+}
+#btnFadeIn{
+	color:purple;
+}
+#btnFadeTog{
+	color:brown;
+}
+body{
+	background-color: #8e0820;
+	font-size: 30px;
+	line-height: 1.5em;
+}
+#box{
+	font-size: 15px;
+	background:#045960;
+	color:#fff;
+	width: 500px;
+	height: 70px;
+	padding:40px;
+	text-align: center;
+
+}
+#box2{
+	background: yellow;
+	width: 100px;
+	height: 100px;
+	position: relative;
+}
